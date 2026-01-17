@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --honey-gold: 35 65% 64%;
+    --dark-honey: 45 75% 31%;
+    --cream: 43 100% 95%;
+    --dark-brown: 14 28% 19%;
+    --success-green: 122 39% 49%;
+    
+    /* Text Colors */
+    --text-primary: 20 36% 12%;
+    --text-secondary: 30 22% 29%;
+    
+    /* Semantic Colors */
+    --background: 43 100% 98%;
+    --foreground: 20 36% 12%;
+
+    --card: 43 100% 97%;
+    --card-foreground: 20 36% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 36% 12%;
+
+    --primary: 35 65% 64%;
+    --primary-foreground: 20 36% 12%;
+
+    --secondary: 43 100% 95%;
+    --secondary-foreground: 20 36% 12%;
+
+    --muted: 43 50% 90%;
+    --muted-foreground: 30 22% 40%;
+
+    --accent: 45 75% 31%;
+    --accent-foreground: 43 100% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 40% 85%;
+    --input: 35 40% 85%;
+    --ring: 35 65% 64%;
+
+    --radius: 0.75rem;
+
+    /* Custom Gradients */
+    --gradient-honey: linear-gradient(135deg, hsl(35, 65%, 64%) 0%, hsl(45, 75%, 45%) 100%);
+    --gradient-cream: linear-gradient(180deg, hsl(43, 100%, 98%) 0%, hsl(43, 100%, 95%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(43, 100%, 97%) 0%, hsl(35, 50%, 90%) 50%, hsl(43, 100%, 95%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 6px rgba(62, 39, 35, 0.08);
+    --shadow-medium: 0 8px 20px rgba(62, 39, 35, 0.12);
+    --shadow-honey: 0 8px 30px rgba(212, 165, 116, 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 30% 8%;
+    --foreground: 43 100% 95%;
+
+    --card: 20 25% 12%;
+    --card-foreground: 43 100% 95%;
+
+    --popover: 20 25% 10%;
+    --popover-foreground: 43 100% 95%;
+
+    --primary: 35 65% 64%;
+    --primary-foreground: 20 36% 12%;
+
+    --secondary: 20 20% 20%;
+    --secondary-foreground: 43 100% 95%;
+
+    --muted: 20 20% 20%;
+    --muted-foreground: 43 50% 70%;
+
+    --accent: 45 75% 40%;
+    --accent-foreground: 43 100% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 20% 25%;
+    --input: 20 20% 25%;
+    --ring: 35 65% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    direction: ltr;
+  }
+
+  /* English Typography */
+  .font-english {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    direction: ltr;
+  }
+
+  .font-arabic {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+    direction: rtl;
+  }
+}
+
+@layer components {
+  /* Islamic geometric pattern background */
+  .islamic-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L35 15L45 15L37.5 22.5L40 32.5L30 27.5L20 32.5L22.5 22.5L15 15L25 15L30 5Z' fill='none' stroke='%23D4A574' stroke-width='0.5' opacity='0.15'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+
+  /* Honeycomb pattern background */
+  .honeycomb-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='56' height='100' viewBox='0 0 56 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23D4A574' stroke-width='0.5' opacity='0.1'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='%23D4A574' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+    background-size: 28px 50px;
+  }
+
+  /* Honey drip animation */
+  @keyframes drip {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+
+  .honey-drip {
+    animation: drip 8s ease-in-out infinite;
+  }
+
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Pulse glow animation */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(212, 165, 116, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(212, 165, 116, 0.6);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* Fade up animation */
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out forwards;
+  }
+
+  /* Scale hover effect */
+  .hover-scale {
+    @apply transition-transform duration-300 ease-out;
+  }
+
+  .hover-scale:hover {
+    @apply scale-105;
+  }
+
+  /* Golden border frame */
+  .golden-frame {
+    border: 2px solid hsl(var(--honey-gold));
+    box-shadow: inset 0 0 20px rgba(212, 165, 116, 0.1);
+    border-radius: var(--radius);
+  }
+
+  /* Islamic decorative border */
+  .islamic-border {
+    position: relative;
+  }
+
+  .islamic-border::before,
+  .islamic-border::after {
+    content: '۞';
+    position: absolute;
+    font-size: 1.5rem;
+    color: hsl(var(--honey-gold));
+  }
+
+  .islamic-border::before {
+    top: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .islamic-border::after {
+    bottom: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Button Variants */
+  .btn-honey {
+    @apply bg-honey text-dark-brown font-semibold px-6 py-3 rounded-xl transition-all duration-300;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-honey:hover {
+    @apply bg-dark-honey text-cream;
+    box-shadow: var(--shadow-honey);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline-honey {
+    @apply border-2 border-honey text-honey bg-transparent font-semibold px-6 py-3 rounded-xl transition-all duration-300;
+  }
+
+  .btn-outline-honey:hover {
+    @apply bg-honey text-dark-brown;
+  }
+
+  /* Card styles */
+  .card-honey {
+    @apply bg-cream rounded-2xl p-6 transition-all duration-300;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .card-honey:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-4px);
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  /* Container max width */
+  .container-honey {
+    @apply max-w-7xl mx-auto px-4 md:px-8;
+  }
+}
+
+@layer utilities {
+  /* Gradient backgrounds */
+  .bg-gradient-honey {
+    background: var(--gradient-honey);
+  }
+
+  .bg-gradient-cream {
+    background: var(--gradient-cream);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Text gradients */
+  .text-gradient-honey {
+    background: var(--gradient-honey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Custom shadows */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-honey {
+    box-shadow: var(--shadow-honey);
+  }
+}
